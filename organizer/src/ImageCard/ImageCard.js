@@ -18,15 +18,21 @@ const useStyles = makeStyles({
     flexDirection : 'column',
     justifyContent : 'center',
     alignItems : 'center'
-  },
-  display : {
-
   }
 });
 
 export default function ImgMediaCard(props) {
+  console.log(props);
+  function arrayBufferToBase64(buffer){
+    let binary = '';
+    let bytes = new Uint8Array(buffer);
+    bytes.forEach(b=>{
+      binary += String.fromCharCode(b);
+    })
+    return window.btoa(binary);
+  }
   const classes = useStyles();
-
+  var base64Flag = 'data:image/jpeg;base64,';
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -34,9 +40,7 @@ export default function ImgMediaCard(props) {
           component="img"
           alt="Associate Developer"
           height="240"
-          image={
-          'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80'
-        }
+          image= {base64Flag +  arrayBufferToBase64(props.img.data)}
           title="Associate Developer"
         />
         <CardContent>
