@@ -4,6 +4,7 @@ const schema = new mongoose.Schema({
 	user_id : String,
 	name : String,
 	email_id : String,
+	designation : String,
 	sap_user_id : String,
 	mobile_no : String,
 	location : {city : String, desk_no : String, country : String },
@@ -16,9 +17,9 @@ const schema = new mongoose.Schema({
 	status : Number,
 	img : { data: Buffer, contentType: String },
 	description : String,
-  created_by : String,
-  created_on : Date,
-  creation_time: Date
+	created_by : String,
+	created_on : Date,
+	creation_time: Date
 })
 
 module.exports = schema;

@@ -5,7 +5,7 @@ const CommSchema = require('./Schema/CommSchema');
 const NotifySchema = require('./Schema/NotifySchema');
 const SpecializationSchema = require('./Schema/SpecializationSchema');
 
-mongoose.connect('mongodb+srv://rjkumar1536:87654321@cluster0-uiuwj.mongodb.net/teamDb?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology : true});
+mongoose.connect('mongodb://localhost:27017/teamDb',{useNewUrlParser: true, useUnifiedTopology : true});
 mongoose.connection.once('open', ()=>{
   console.log('connection established');
 });
