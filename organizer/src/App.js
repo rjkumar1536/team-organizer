@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { makeStyles } from '@material-ui/core/styles';
-import Team from './Team/Team'
+import Team from './Team/Team';
+import Carousel from './Carousel/Carousel';
 
 class App extends Component {
   constructor(props){
@@ -16,6 +17,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         </header>
+        <Carousel></Carousel>
         <Team  users = {this.state.users}></Team>
       </div>
     );

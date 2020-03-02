@@ -5,7 +5,7 @@ import ImageCard from '../ImageCard/ImageCard';
 const useStyles = makeStyles({
     card: {
         position: 'absolute',
-        top : 300,
+        top : 400,
         display: 'flex',
         flexDirection : 'row',
         flexWrap: 'wrap',
